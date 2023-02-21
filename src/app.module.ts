@@ -14,7 +14,7 @@ import { ClothModule } from './cloth/cloth.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'sqlite',
-      database: 'clothesDB',
+      database: 'clothesDB2',
       entities: [__dirname + "/**/*.entity{.ts,.js}", User, Location, Cloth],
       synchronize: true,
       autoLoadEntities: true

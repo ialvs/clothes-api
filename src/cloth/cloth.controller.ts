@@ -3,7 +3,7 @@ import {UpdateResult, DeleteResult} from 'typeorm';
 import { ClothService } from './cloth.service';
 import { Cloth } from './cloth.entity';
 
-@Controller('api/v1/cloths')
+@Controller('api/v1/clothes')
 export class ClothController {
  constructor(private clothService: ClothService) { }
 

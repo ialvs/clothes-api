@@ -18,7 +18,7 @@ async Create(@Body() user: User): Promise<User>{
 }
 
 @Get(':id')
-async GetOne(@Param() id:number): Promise<User>{
+async GetOne(@Param('id') id: number): Promise<User>{
     return await this.userService.findOne(id)
 }
 

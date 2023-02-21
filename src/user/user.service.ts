@@ -12,12 +12,21 @@ export class UserService {
 
   async findAll(): Promise<User[]> {
 
-    return await this.userRepository.find()
+    return await this.userRepository.find({
+      relations: {
+        clothes: true
+      }
+    })
     
   }
 
   async findOne(id: number): Promise<User> {
-    return await this.userRepository.findOneById(id)
+    return await this.userRepository.findOne({select:{
+      id: true,
+      name: true,
+      email: true,
+      isActive: true
+    }, where: {id: id}, relations: { clothes: true}})
   }
 
   async create(user: User): Promise<User> {

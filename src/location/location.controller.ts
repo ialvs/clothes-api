@@ -18,7 +18,7 @@ async Create(@Body() location: Location): Promise<Location>{
 }
 
 @Get(':id')
-async GetOne(@Param() id:number): Promise<Location>{
+async GetOne(@Param('id') id:number): Promise<Location>{
     return await this.locationService.findOne(id)
 }
 

@@ -11,11 +11,15 @@ export class LocationService {
   ) { }
 
   async findAll(): Promise<Location[]> {
-    return await this.locationRepository.find()
+    return await this.locationRepository.find({
+      relations: {
+        clothes: true
+      }
+    })
   }
 
   async findOne(id: number): Promise<Location> {
-    return await this.locationRepository.findOneById(id)
+    return await this.locationRepository.findOne({where: {id: id}, relations: { clothes: true}})
   }
 
   async create(location: Location): Promise<Location> {

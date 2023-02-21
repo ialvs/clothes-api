@@ -1,6 +1,6 @@
 import { User } from "src/user/user.entity";
 import { Location } from "src/location/location.entity";
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
 export class Cloth{
@@ -17,10 +17,10 @@ export class Cloth{
     @Column({length: 3})
     size!: string
 
-    @ManyToOne(() => User, (user) => user.clothes)
+    @ManyToOne(() => User, (user) => user.clothes,{cascade: true, eager: true})
     user: User
     
-    @ManyToOne(() => Location, (location) => location.clothes)
+    @ManyToOne(() => Location, (location) => location.clothes,{cascade: true, eager: true})
     location: Location
 
 }
