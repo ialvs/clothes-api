@@ -1,0 +1,22 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+        "title": "CLOTHES-API",
+        "description": "An API to a database to manager user's clothes",
+        "version": "0.1"
+    },
+    "paths": {
+        "/users": {
+            "get": {
+                "summary": "Get all registered users",
+                "description": "Retrieves the data related to all users on the database",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": ""
+                    }
+                }
+            }
+        }
+    }
+}
