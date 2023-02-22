@@ -4,10 +4,7 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DataSource } from 'typeorm'
 import { UserModule } from './user/user.module';
-import { User } from './user/user.entity'
 import { LocationModule } from './location/location.module';
-import { Location } from './location/location.entity';
-import { Cloth } from './cloth/cloth.entity';
 import { ClothModule } from './cloth/cloth.module';
 
 @Module({
@@ -15,7 +12,7 @@ import { ClothModule } from './cloth/cloth.module';
     TypeOrmModule.forRoot({
       type: 'sqlite',
       database: 'clothesDB',
-      entities: [__dirname + "/**/*.entity{.ts,.js}", User, Location, Cloth],
+      entities: [__dirname + "/**/*.entity{.ts,.js}"],
       synchronize: true,
       autoLoadEntities: true
     }), UserModule, LocationModule, ClothModule
