@@ -27,7 +27,7 @@ A API utiliza a porta 3000 por padrão. As rotas disponíveis são:
 - **GET /users/**: Retorna uma lista com todos os usuários.
 - **GET /users/:userId/**: Retorna as informações de um usuário.
 
-- **GET /users/:userId/clothes/:clothesId**: Retorna as informações de uma roupa específica de um usuário.
+
 - **POST /users/**: Cria um novo usuário.
 - **POST /users/:userId/clothes**: Cria uma nova roupa para um usuário.
 - **PUT /users/:userId/clothes/:clothesId**: Atualiza as informações de uma roupa de um usuário.
@@ -39,8 +39,9 @@ A API utiliza a porta 3000 por padrão. As rotas disponíveis são:
 **Roupas:**
 - **GET /clothes/**: Retorna uma lista com todas as roupas.
 - **GET /clothes/:clothId/**: Retorna as informações de uma roupa.
-
 - **GET /clothes/user/:userId**: Retorna uma lista com todas as roupas de um usuário.
+
+- **GET /clothes/:clothId/user/:userId**: Retorna as informações de uma roupa específica de um usuário.
 
 - **POST /clothes/**: Cria uma nova roupa.
 - **PUT /clothes/:clothId/**: Atualiza as informações de uma roupa.
