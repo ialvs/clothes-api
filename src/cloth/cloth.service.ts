@@ -16,7 +16,8 @@ export class ClothService {
 
   async findOne(id: number): Promise<Cloth> {
     return await this.clothRepository.findOne({
-      where: { id: id }})
+      where: { id: id }
+    })
   }
 
   async create(cloth: Cloth): Promise<Cloth> {
@@ -36,14 +37,19 @@ export class ClothService {
   async findByUser(id: number): Promise<Cloth[]> {
     return await this.clothRepository.find({
       relations: { user: true },
-      where: {user: {
-        id : id
-      }}
+      where: {
+        user: {
+          id: id
+        }
+      }
     }
     )
   }
 
-  /* async findOneByUser(clothId: number, userId: number): Promise<Cloth>{
-    return await this.clothRepository.findOne
-  } */
+  async findOneByUser(clothId: number, userId: number): Promise<Cloth> {
+    return await this.clothRepository.findOne({
+      relations: {user: true},
+      where: {id: clothId, user: {id: userId}}
+    })
+  }
 }
