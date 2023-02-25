@@ -31,4 +31,14 @@ export class ClothService {
   async remove(id: number): Promise<DeleteResult> {
     return await this.clothRepository.delete(id);
   }
+
+  async findByUser(id: number): Promise<Cloth[]> {
+    return await this.clothRepository.find({
+      relations: { user: true },
+      where: {user: {
+        id : id
+      }}
+    }
+    )
+  }
 }
