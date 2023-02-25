@@ -34,4 +34,9 @@ async Delete(@Param() id: number): Promise<DeleteResult>{
 
  }
 
+ @Get('/user/:id')
+ async GetByUser(@Param('id') id: number){
+    return await this.clothService.findByUser(id)
+ }
+
 }
