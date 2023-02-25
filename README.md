@@ -57,6 +57,9 @@ A API utiliza a porta 3000 por padrão. As rotas disponíveis são:
 
 Contribuições são sempre bem-vindas! Sinta-se à vontade para abrir uma issue ou pull request se quiser ajudar a melhorar a API.
 
+Pendências: 
+- Atualizar o arquivo openapi.
+
 ## Licença
 
 Esse projeto está sob a licença GNU GPLv3 .
