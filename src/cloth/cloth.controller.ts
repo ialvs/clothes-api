@@ -18,7 +18,7 @@ async Create(@Body() cloth: Cloth): Promise<Cloth>{
 }
 
 @Get(':id')
-async GetOne(@Param() id:number): Promise<Cloth>{
+async GetOne(@Param('id') id:number): Promise<Cloth>{
     return await this.clothService.findOne(id)
 }
 
