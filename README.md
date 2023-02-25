@@ -26,15 +26,9 @@ A API utiliza a porta 3000 por padrão. As rotas disponíveis são:
 
 - **GET /users/**: Retorna uma lista com todos os usuários.
 - **GET /users/:userId/**: Retorna as informações de um usuário.
-
-
 - **POST /users/**: Cria um novo usuário.
-
-- **PUT /users/:userId/clothes/:clothesId**: Atualiza as informações de uma roupa de um usuário.
 - **PUT /users/:userId/**: Atualiza as informações de um usuário.
 - **DELETE /users/:userId/**: Remove as informações de um usuário.
-- **DELETE /users/:userId/clothes/:clothesId**: Remove uma roupa de um usuário.
-- **POST /users/:userId/clothes/:clothesId/location**: Registra a localização atual de uma roupa de um usuário.
 
 **Roupas:**
 - **GET /clothes/**: Retorna uma lista com todas as roupas.
@@ -42,12 +36,15 @@ A API utiliza a porta 3000 por padrão. As rotas disponíveis são:
 - **GET /clothes/user/:userId**: Retorna uma lista com todas as roupas de um usuário.
 - **GET /clothes/:clothId/user/:userId**: Retorna as informações de uma roupa específica de um usuário.
 - **POST /clothes/**: Cria uma nova roupa.
-
-
-
 - **PUT /clothes/:clothId/**: Atualiza as informações de uma roupa.
 - **DELETE /clothes/:clothId/**: Remove as informações de uma roupa.
 
+**Localizações:**
+- **GET /locations/**: Retorna uma lista com todas as localizações.
+- **GET /locations/:locationId**: Retorna as informações de uma roupa.
+- **POST /locations/**: Cria uma nova localização.
+- **PUT /locations/:locationId**: Atualiza as informações de uma localização.
+- **DELETE /locations/locationId**: Deleta as informações de uma localização.
 
 ## Tecnologias utilizadas
 
@@ -62,4 +59,4 @@ Contribuições são sempre bem-vindas! Sinta-se à vontade para abrir uma issue
 
 ## Licença
 
-Esse projeto está sob a licença MIT.
+Esse projeto está sob a licença GNU GPLv3 .
