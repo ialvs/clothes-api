@@ -4,7 +4,7 @@ Essa é uma API RESTful escrita em NestJS que utiliza TypeORM e SQLite para gere
 
 ## Instalação
 
-Antes de tudo, certifique-se de ter o Node.js e o npm (ou yarn) instalados em sua máquina.
+Antes de tudo, certifique-se de ter o Node.js e o npm instalados em sua máquina.
 
 1. Clone o repositório para sua máquina:
 `git clone https://github.com/ialvs/clothes-api.git`
@@ -13,7 +13,7 @@ Antes de tudo, certifique-se de ter o Node.js e o npm (ou yarn) instalados em su
 `cd clothes-api`
 
 3. Instale as dependências:
-`npm install` ou `yarn install`
+`npm install`
 
 4. Inicie a aplicação:
 `npm start`
